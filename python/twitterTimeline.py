@@ -14,14 +14,13 @@ twitter = Twitter(auth = OAuth(config["access_key"], config["access_secret"], co
 
 user = ["chetan_bhagat", "SrBachchan"]
 
-"""
 for i in user:
 	print i
 	results = twitter.statuses.user_timeline(screen_name = i)
 	#print json.dumps(results, indent=4)
         #print json.dumps(results)
         print results[0]["text"]
-"""
+
 
 def getTweets(handleName):
      return twitter.statuses.user_timeline(screen_name = handleName)	
